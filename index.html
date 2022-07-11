@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #navbar {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            height: 50px;
+            margin: auto;
+            background-color: black;
+            color: aliceblue;
+            padding: 10px;
+        }
+        
+        #navbar>div>a {
+            color: aliceblue;
+            margin-top: 10px;
+        }
+        
+        #navbar>div {
+            margin-top: 10px;
+        }
+        
+        #navbar>input {
+            width: 30%;
+        }
+        
+        #sorting {
+            width: 100%;
+            height: 30px;
+            display: flex;
+            margin: auto;
+            justify-content: space-around;
+            background-color: aquamarine;
+        }
+        
+        #sorting>button {
+            background-color: rgb(206, 131, 19);
+            color: black;
+            cursor: pointer;
+        }
+        
+        #hotels-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 90%;
+            gap: 10px;
+            margin: auto;
+            padding: 10px;
+        }
+        
+        #hotels-list>div {
+            width: 85%;
+            height: 550px;
+            margin: auto;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        
+        #hotels-list>div>img {
+            width: 100%;
+            height: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+        <h2>Hotel App</h2>
+        <input type="text" placeholder="Search" oninput="getdata()" id="query">
+        <!-- the search-box id:- "query"
+    
+ - the log-in and sign-up link will have ids:- "login" and "signup" -->
+        <div><a href="login.html">login</a></div>
+        <div> <a href="signup.html">sign-up</a></div>
+
+
+    </div>
+    <div id="sorting">
+        <button id="sort_lth" onclick="lToh()">Low to high</button>
+        <button id="sort_htl" onclick="hTol()">High to low</button>
+        <button id="filter_ac" onclick="AC()">AC</button>
+        <button id="filter_nonac" onclick="nonAc()">Non AC</button>
+
+        <!-- sort by price low to high Id:- "sort_lth"
+ - sort by price high to low Id:- "sort_htl"
+ - Filter Ac hotels Id:- "filter_ac"
+ - Filter Non Ac hotels Id:- "filter_nonac" -->
+    </div>
+    <div id="hotels-list">
+        <!-- - Append all fetched hotels inside div with id:- "hotels_list"
+ - Every hotel card will have id:-  "hotel"
+ - The book now button will have class as "book" -->
+    </div>
+</body>
+
+</html>
+<script src="/scripts/index.js">
+</script>
